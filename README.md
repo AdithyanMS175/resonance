@@ -1,4 +1,4 @@
-🎧 Resonance
+<h1>🎧 Resonance</h1>
 
 A responsive headset website built with HTML, CSS, Tailwind CSS, Google Fonts, and Font Awesome.
 The design emphasizes immersive visuals, responsive layouts, and a clean modern style.
