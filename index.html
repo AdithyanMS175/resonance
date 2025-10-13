@@ -18,55 +18,16 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        .gradient-box {
-            background: linear-gradient(180deg, #52483E 0%, #8B8782 100%);
-        }
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        .her-gradient-box {
-            background: linear-gradient(180deg, #D2CDC6 0%, #F5F5F5 100%);
-        }
-
-        .popies {
-            font-family: "Poppins", sans-serif;
-        }
-
-        .subtt {
-            background: linear-gradient(180deg, #DACCBC 0%, #AFA497 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .imgback {
-            background: linear-gradient(180deg, #D2CDC6 0%, #F8BF93 100%);
-        }
-
-        .imgeback {
-            background: linear-gradient(180deg, #D2CDC6 0%, #F2EBE3 100%);
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-        }
-
-        .foofoo {
-            background: linear-gradient(180deg, #F5F5F5 0%, #D2CDC6 100%);
-
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="bg-[#F5F5F5] popies ">
-        <nav class="fixed top-0 left-0 right-0 flex items-center justify-between mx-6 h-[70px]  z-50">
+        <nav
+            class="fixed top-0 left-0 right-0 flex items-center justify-between mx-6 h-[70px]  z-50 fade-in-top-normal">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,10 +63,11 @@
             <!-- Menu -->
             <ul
                 class="max-sm:bg-[#F5F5F5] max-md:bg-[#F5F5F5] rounded absolute top-[70px] left-0 w-full  flex-col items-center space-y-4 py-4 hidden peer-checked:flex md:peer-checked:flex md:flex md:static md:flex-row md:space-y-0 md:space-x-6 md:w-auto">
-                <li><a href="" class="hover:text-[#52483E]">Home</a></li>
-                <li><a href="" class="hover:text-[#52483E]">Tech Specs</a></li>
+                <li><a href="./index.html"
+                        class="gradient-box text-white px-4 py-2 rounded-full hover:opacity-90 transition">Home</a></li>
+                <li><a href="./techspecs.html" class="hover:text-[#52483E]">Tech Specs</a></li>
                 <li>
-                    <a href="" class="gradient-box text-white px-4 py-2 rounded-full  hover:opacity-90 transition">
+                    <a href="./compare.html" class="hover:text-[#52483E]">
                         Compare
                     </a>
                 </li>
@@ -117,15 +79,15 @@
            text-[40px] top-[170px]     
            sm:text-[90px] sm:top-[200px] 
            md:text-[120px] md:top-[250px]
-           lg:text-[180px] lg:top-[300px] 
+           lg:text-[180px] lg:top-[300px] loat1
             ">Aura Pro ll</h1>
-            <img class="z-[1] max-sm:absolute  max-sm:h-[350px] max-sm:w-[350px] max-sm:top-[220px]"
+            <img class="z-[1] max-sm:absolute  max-sm:h-[350px] max-sm:w-[350px] max-sm:top-[220px] float"
                 src="./assets/Headphone Image.png" alt="">
             <h1 class="absolute z-[2] font-bold text-[#52483E] 
            text-[50px] top-[100px] 
            sm:text-[90px] sm:top-[100px] 
            md:text-[120px] md:top-[150px] 
-           lg:text-[180px] lg:top-[150px]">Resonance</h1>
+           lg:text-[180px] lg:top-[150px] loat2">Resonance</h1>
 
 
 
@@ -135,36 +97,40 @@
 
         <section class="py-20 ">
             <div class="text-center">
-                <h1 class="font-bold text-4xl text-[#52483E]">Your Style. Your Sound.</h1>
-                <h6 class="text-[#8B8782] text-2xl">Studio-grade acoustics that dissolve distractions and awaken
+                <h1 data-aos="fade-up" class="font-bold text-4xl text-[#52483E] ">Your Style. Your Sound.</h1>
+                <h6 data-aos="fade-up" class="text-[#8B8782] text-2xl">Studio-grade acoustics that dissolve distractions
+                    and awaken
                     clarity.</h6>
             </div>
 
             <!-- Carousel Section -->
             <div class="relative overflow-hidden">
                 <!-- Carousel -->
-                <div class="relative flex justify-center items-center space-x-8 mt-12">
+                <div class="relative flex justify-center items-center space-x-8 mt-12" id="carousel">
 
                     <!-- Left (blurred) -->
                     <img src="./assets/headphones(yellow).png"
-                        class="w-64 h-64 object-contain opacity-50 blur-sm scale-100">
+                        class="w-64 h-64 object-contain opacity-50 blur-sm scale-100 float">
 
                     <!-- Center (active) -->
-                    <img src="./assets/headphones(green).png" class="w-[500px] h-[500px] object-contain z-10">
+                    <img src="./assets/headphones(green).png" class="w-[500px] h-[500px] object-contain z-10 ">
 
                     <!-- Right (blurred) -->
                     <img src="./assets/headphones(red).png"
-                        class="w-64 h-64 object-contain opacity-50 blur-sm scale-100">
+                        class="w-64 h-64 object-contain opacity-50 blur-sm scale-100 float">
 
                 </div>
 
                 <!-- Controls -->
                 <div class="flex justify-center mt-6 space-x-4">
                     <button
-                        class="w-[60px] h-[60px] rounded-full bg-[#D8B74B] border-2 border-transparent hover:border-gray-600"></button>
-                    <button class="w-[60px] h-[60px] rounded-full bg-[#94915B] border-2  border-gray-600 "></button>
+                        class="color-btn w-[60px] h-[60px] rounded-full bg-[#D8B74B] border-2 border-transparent hover:border-gray-600"
+                        data-index="0"></button>
+                    <button class="color-btn w-[60px] h-[60px] rounded-full bg-[#94915B] border-2  border-gray-600 "
+                        data-index="1"></button>
                     <button
-                        class="w-[60px] h-[60px] rounded-full bg-[#883D39] border-2 border-transparent hover:border-gray-600"></button>
+                        class="color-btn w-[60px] h-[60px] rounded-full bg-[#883D39] border-2 border-transparent hover:border-gray-600"
+                        data-index="2"></button>
                 </div>
 
                 <h3 class="text-[#8B8782] text-center py-4 text-2xl max-sm:text-xl">Choose a Color that fits your flow.
@@ -176,7 +142,7 @@
 
 
 
-        <section class="flex items-center overflow-x-auto gap-6 px-6 snap-x snap-mandatory scrollbar-hide">
+        <section data-aos="fade-left" class="flex items-center overflow-x-auto gap-6 px-6 snap-x snap-mandatory scrollbar-hide">
 
             <!-- Card 1 -->
             <div class="rounded-lg py-8 max-lg:py-0 flex items-center justify-between imgback snap-center flex-shrink-0 
@@ -192,14 +158,14 @@
 
                 <!-- Image -->
                 <img src="./assets/Headphone Model.png" alt=""
-                    class="w-[clamp(250px,40%,360px)] h-[clamp(360px,40%,360px)] max-sm:order-2 mx-auto">
+                    class="w-[clamp(250px,40%,360px)]  h-[480px] max-sm:order-2 mx-auto">
             </div>
 
 
             <!-- Card 2 -->
             <div class="rounded-lg py-8 max-lg:py-0  flex items-center justify-between imgeback snap-center flex-shrink-0 
-           w-[90vw] max-w-[1080px] h-[55vh] max-h-[480px] 
-           max-sm:flex-col max-sm:h-auto max-sm:gap-4">
+                        w-[90vw] max-w-[1080px] h-[55vh] max-h-[480px] 
+                        max-sm:flex-col max-sm:h-auto max-sm:gap-4">
 
                 <!-- Text -->
                 <div class="flex text-[clamp(1.2rem,2vw,2rem)] justify-center max-sm:order-2 px-4">
@@ -213,12 +179,30 @@
                     class="w-[clamp(180px,40%,360px)] h-[clamp(380px,40%,460px)] max-sm:order-1 mx-auto">
             </div>
 
+             <!-- Card 3 -->
+            <div class="rounded-lg py-8 max-lg:py-0  flex items-center justify-between imge3back snap-center flex-shrink-0 
+                        w-[90vw] max-w-[1080px] h-[55vh] max-h-[480px] 
+                        max-sm:flex-col max-sm:h-auto max-sm:gap-4">
+
+                <!-- Text -->
+                <div class="flex text-[clamp(1.2rem,2vw,2rem)] justify-center max-sm:order-2 px-4">
+                    <h2 class="max-w-[372px] text-center sm:text-left leading-snug">
+                        Thoughtfully packed in plastic-free, high quality materials.
+                    </h2>
+                </div>
+
+                <!-- Image -->
+                <img src="./assets/Headphone Detail 4 (1).png" alt=""
+                    class="w-[clamp(180px,40%,360px)] h-[clamp(380px,40%,460px)] max-sm:order-1 mx-auto">
+            </div>
+
+
         </section>
 
-        <section class="h-screen flex flex-col justify-around">
+        <section data-aos="fade-left" class="h-screen flex flex-col justify-around">
             <div class="text-center">
-                <h1 class="font-bold text-4xl text-[#52483E]">Every Detail Matters</h1>
-                <h5 class="text-[#8B8782] text-2xl">From the stitch to the signal, precision lives here.</h5>
+                <h1 data-aos="fade-up" class="font-bold text-4xl text-[#52483E]">Every Detail Matters</h1>
+                <h5 data-aos="fade-up" class="text-[#8B8782] text-2xl">From the stitch to the signal, precision lives here.</h5>
             </div>
             <div class="flex items-center overflow-x-auto gap-6 px-6 snap-x snap-mandatory scrollbar-hide">
                 <img src="./assets/layer6/Headphone Detail 1.png" class=" w-[386px] h-[386px]" />
@@ -230,7 +214,7 @@
             </div>
         </section>
 
-        <section class="h-screen bg-[url(/assets/Feature-Image.png)] bg-cover bg-center flex justify-center">
+        <section data-aos="fade-up" class="h-screen bg-[url(/assets/Feature-Image.png)] bg-cover bg-center flex justify-center">
             <div class="h-[248px] flex flex-col justify-center items-center gap-6 mt-10">
                 <h1 class="text-8xl font-semibold text-white max-md:text-4xl max-lg:text-6xl">Dreamlike Sound</h1>
                 <h6 class="text-2xl max-md:text-xl  text-white">Starting at 320 - Available Now</h6>
@@ -240,7 +224,7 @@
             </div>
         </section>
 
-        <footer class="foofoo h-auto">
+        <footer data-aos="fade-up" class="foofoo h-auto">
             <div class="h-auto py-10">
                 <div class="flex flex-col justify-center text-center items-center gap-6">
                     <h1 class="text-4xl font-semibold text-[#52483E] max-md:text-3xl">Sound. Presence. Purpose.</h1>
@@ -303,5 +287,15 @@
 
     </div>
 </body>
+
+
+
+
+<script>
+    AOS.init();
+</script>
+
+
+<script src="./resonance.js"></script>
 
 </html>

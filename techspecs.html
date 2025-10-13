@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Specs</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asimovian&family=Barriecito&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Fontdiner+Swanky&family=Herr+Von+Muellerhoff&family=Playwrite+MX+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="bg-[#F5F5F5] popies">
+
+        <nav class="fixed top-0 left-0 right-0 flex items-center justify-between mx-6 h-[70px] z-50 fade-in-top-normal">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2005_6)">
+                        <path d="M4.87494 9.75V16.25" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M8.93744 3.25V22.75" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12.9999 6.5V19.5" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M17.0624 9.75V16.25" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M21.1251 8.125V17.875" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2005_6">
+                            <rect width="26" height="26" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h3 class="font-medium text-lg">Resonance</h3>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <label for="menu-toggle" class="cursor-pointer md:hidden flex flex-col space-y-1">
+                <i class="fa-solid fa-bars cursor-pointer md:hidden"></i>
+
+            </label>
+
+
+            <!-- Menu -->
+            <ul
+                class="max-sm:bg-[#F5F5F5] max-md:bg-[#F5F5F5] rounded absolute top-[70px] left-0 w-full  flex-col items-center space-y-4 py-4 hidden peer-checked:flex md:peer-checked:flex md:flex md:static md:flex-row md:space-y-0 md:space-x-6 md:w-auto">
+                <li><a href="./index.html" class="hover:text-[#52483E]">Home</a></li>
+                <li><a href="./techspecs.html"
+                        class="gradient-box text-white px-4 py-2 rounded-full hover:opacity-90 transition">Tech
+                        Specs</a></li>
+                <li>
+                    <a href="./compare.html" class="hover:text-[#52483E]">
+                        Compare
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="py-20 flex max-sm:flex-col justify-center">
+            <div class="text-center fade-in-top-normal">
+                <h1 class="font-bold text-4xl text-[#52483E]">Colors</h1>
+
+            </div>
+
+            <!-- Carousel Section -->
+            <div class="relative overflow-hidden lg:w-[800px]">
+                <!-- Carousel -->
+                <div class="relative flex justify-center items-center space-x-8 mt-12">
+
+
+
+                    <!-- Center (active) -->
+                    <img id="theimg" src="./assets/headphones(green).png"
+                        class="w-[600px] h-[600px] object-contain z-10 float">
+
+
+
+                </div>
+
+                <!-- Controls -->
+                <div class="flex justify-center mt-6 space-x-4">
+                    <button
+                        class="w-[60px] cursor-pointer h-[60px] rounded-full bg-[#D8B74B] border-2 border-transparent hover:border-gray-600"
+                        onclick="changeImg(1)"></button>
+                    <button class="w-[60px] cursor-pointer h-[60px] rounded-full bg-[#94915B] border-2 border-gray-600 "
+                        onclick="changeImg(2)"></button>
+                    <button
+                        class="w-[60px] cursor-pointer h-[60px] rounded-full bg-[#883D39] border-2 border-transparent hover:border-gray-600"
+                        onclick="changeImg(3)"></button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section data-aos="fade-up" class="justify-center lg:h-screen p-14 max-sm:p-4 ">
+            <div class="flex justify-between items-start p-12 md:gap-8 max-md:gap-8 max-sm:flex-col max-sm:p-2">
+                <div class="md:w-[250px] lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Audio Technology</h1>
+
+                </div>
+
+                <div class="lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Custom-tuned 40mm Resonance™ drivers for deep bass.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Ultra-low distortion signal processing.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Adaptive Sound Sculpting™ — real-time EQ.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Spatial Audio Calibration with dynamic head tracking.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Natural Voice Isolation for calls, focus, and immersive
+                        listening.
+                    </p>
+                    <p class="text-lg text-[#8B8782] my-3">Pressure-balancing acoustic vents for long-wear comfort.</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2">
+                <div class="md:w-[250px] lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Intelligence</h1>
+
+                </div>
+
+                <div class="lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Dual noise-targeting microphones.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Internal ear-position mic for personalized audio tuning.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Proximity & motion sensors to detect wear and usage.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Gesture-aware force sensor for effortless control.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Accelerometer-assisted voice capture for clarity on the move.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section data-aos="fade-up" class="justify-center lg:h-screen p-14 max-sm:p-4 ">
+            <div class="flex justify-between items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px]  lg:w-[300px] ">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Power</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Custom-designed R2 Sound Core chip.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Advanced audio algorithms tuned for emotional clarity.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Onboard neural audio engine for Spatial Audio and Adaptive
+                        EQ.</p>
+
+
+
+                </div>
+            </div>
+            <div class="flex justify-between items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px] lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Controls</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Tap once to play/pause or answer a call.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Tap twice to skip forward or end a call.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Tap three times to rewind.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Press and hold to access voice assistant.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Automatic mute when removed, smart resume when worn.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up" class="justify-center lg:h-screen p-14 max-sm:p-4 ">
+            <div
+                class="flex justify-between lg:items-center items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px]  lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Built for the Elements</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Rated IPX4 for sweat and weather resistance.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Designed for long sessions, light activity, or relaxed
+                        stillness.</p>
+
+
+
+
+                </div>
+            </div>
+            <div
+                class="flex justify-between lg:items-center items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px]  lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Battery</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Up to 36 hours total listening time with case.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Up to 6.5 hours on a single charge.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Fast charge: 10 minutes = 2 hours of play.</p>
+                    <p class="text-lg text-[#8B8782] my-3">USB-C charging + Qi-compatible wireless charging.</p>
+                    <p class="text-lg text-[#8B8782] my-3">LED status light + Find My compatible tone alert.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up" class="justify-center lg:h-screen p-14 max-sm:p-4 ">
+            <div
+                class="flex justify-between lg:items-center items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px]  lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Connectivity</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">Bluetooth® 5.3 low-latency audio.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Multipoint connection with auto handoff.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Seamless pairing across all your devices.</p>
+                </div>
+            </div>
+            <div
+                class="flex justify-between lg:items-center items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px]  lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Materials</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px]">
+                    <p class="text-lg text-[#8B8782] my-3">100% recycled aluminum in internal frames.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Bio-based mesh ear padding.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Rare earth magnets sourced from reclaimed materials.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Plastic-free, fiber-based packaging.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Assembled in Zero Waste-certified facilities.</p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section data-aos="fade-up" class="justify-center  p-14 max-sm:p-4 imgeback">
+            <div
+                class="flex justify-between lg:items-center items-start p-12 md:gap-8  max-md:gap-8 max-sm:flex-col max-sm:p-2 ">
+                <div class="md:w-[250px]  lg:w-[300px]">
+                    <h1 class="font-bold text-4xl text-[#52483E]">Sustainability & Materials</h1>
+
+                </div>
+
+                <div class="md:w-[500px] lg:w-[698px] max-sm:w-[380px] ">
+                    <p class="text-lg text-[#8B8782] my-3">Bluetooth® 5.3 low-latency audio.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Multipoint connection with auto handoff.</p>
+                    <p class="text-lg text-[#8B8782] my-3">Seamless pairing across all your devices.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer data-aos="fade-up" class="foofoo h-auto">
+            <div class="h-auto py-10">
+                <div class="flex flex-col justify-center text-center items-center gap-6">
+                    <h1 class="text-4xl font-semibold text-[#52483E] max-md:text-3xl">Sound. Presence. Purpose.</h1>
+                    <h6 class="text-xl text-[#8B8782] w-[clamp(320px,80%,800px)]">Focused on crafting immersive audio
+                        experiences.
+                        We believe sound should not just be heard—it should move you.</h6>
+                </div>
+                <div class="flex items-center justify-center gap-2 mt-12">
+                    <a href="" class="bg-[#F5F5F5] text-black px-4 py-2 rounded-full  hover:opacity-60 transition">
+                        Aura Pro II
+                    </a>
+                    <a href="" class="bg-[#F5F5F5] text-black px-4 py-2 rounded-full  hover:opacity-60 transition">
+                        Flow II
+                    </a>
+                </div>
+            </div>
+            <div
+                class="h-auto border-t-2 border-y-[#8B8782] flex flex-col items-center content-center justify-between gap-2 p-8 sm:flex-row sm:p-4 ">
+
+                <div class="flex items-center space-x-2 ml-3 sm:flex-row sm:justify-center">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2005_6)">
+                            <path d="M4.87494 9.75V16.25" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8.93744 3.25V22.75" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12.9999 6.5V19.5" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M17.0624 9.75V16.25" stroke="#52483E" stroke-width="2.4375" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21.1251 8.125V17.875" stroke="#52483E" stroke-width="2.4375"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2005_6">
+                                <rect width="26" height="26" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <h3 class="font-medium text-lg">Resonance</h3>
+                </div>
+                <div class="mr-3 gap-6 text-center flex flex-col sm:flex-row">
+                    <span>© 2025 Resonance. Adithyan M S.</span>
+                    <div class="flex justify-center">
+                        <i class=" mx-1 fa-brands fa-discord"></i>
+                        <i class=" mx-1 fa-brands fa-x-twitter"></i>
+                        <i class=" mx-1 fa-brands fa-meta"></i>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </footer>
+
+    </div>
+</body>
+
+<script>
+    AOS.init();
+</script>
+
+
+<script src="./resonance.js"></script>
+
+</html>
